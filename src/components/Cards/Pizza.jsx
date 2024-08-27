@@ -28,12 +28,10 @@ const Pizza = () => {
             <p className="card-text">Descripcion: {pizza.desc}</p>
 
             <p className="card-text">Ingredientes:</p>
-            <p className="card-text">{pizza.ingredients}</p>
-              {/* <ul>
-                {pizza.ingredients.map ((item) => {
-                  return <li>{item}</li> })}
+              <ul >
+                {pizza.ingredients ? pizza?.ingredients.map((ingredient, index) => ( <li key={index}>{ingredient}</li>)) : null}
               </ul>
-             */}
+            
             <p className="card-text">Precio: {precioFormat}</p>
 
             <a href="#" className="btn btn-primary">Agregar <FontAwesomeIcon icon={faCartShopping} /> </a>
